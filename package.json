@@ -1,0 +1,39 @@
+{
+  "name": "ramka2-front",
+  "version": "0.0.1",
+  "description": "Front-end for ramka2 project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qaraluch/ramka2-front.git"
+  },
+  "author": "qaraluch",
+  "license": "MIT",
+  "homepage": "https://github.com/qaraluch/ramka2-front#readme",
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.20.5",
+    "prettier": "2.0.5"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/styles": "^4.10.0",
+    "clsx": "^1.1.1",
+    "lodash": "^4.17.19",
+    "next": "^9.5.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
