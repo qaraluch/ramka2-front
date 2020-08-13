@@ -3,15 +3,14 @@ import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import Header from "../components/Header";
 import Link from "../components/Link";
-import TableViewDbRecords from "../components/TableViewDbRecords";
-import { pullAllInfoDB } from "../src/db";
-import { DB_PATH } from "../src/constants";
+import TableViewImages from "../components/TableViewImages";
+import { getAllImages } from "../src/api";
 
-export default function ViewDbRecordsTable({ dbAllInfo }) {
+export default function ImagesList({ allImages }) {
   return (
     <>
       <Head>
-        <title>Ramka - db records view table</title>
+        <title>Ramka2</title>
       </Head>
       <Container maxWidth="xl">
         <Grid>
@@ -20,7 +19,7 @@ export default function ViewDbRecordsTable({ dbAllInfo }) {
             <Link href="/">home</Link>
           </Grid>
           <Grid item>
-            <TableViewDbRecords list={dbAllInfo} />
+            <TableViewImages list={allImages} />{" "}
           </Grid>
         </Grid>
       </Container>
@@ -30,8 +29,8 @@ export default function ViewDbRecordsTable({ dbAllInfo }) {
 
 export async function getServerSideProps(context) {
   //TODO: implement error handling?
-  const dbAllInfo = await pullAllInfoDB(DB_PATH);
+  const allImages = await getAllImages();
   return {
-    props: { dbAllInfo },
+    props: { allImages },
   };
 }
