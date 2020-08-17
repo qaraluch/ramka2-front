@@ -14,6 +14,10 @@ export default function Index() {
         <Link href="images-list" color="secondary">
           images-list
         </Link>
+        <br />
+        <Link href="design-system" color="secondary">
+          design-system
+        </Link>
       </Container>
     </>
   );
